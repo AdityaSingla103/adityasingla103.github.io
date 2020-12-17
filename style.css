@@ -1,0 +1,52 @@
+.p{
+    text-align:center ;
+    background-color:#BCFF00;
+    height:230px;
+    width:230px;
+    Border:0;
+    color:#27282a;
+    margin-left:0px;
+    margin-right:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    border-color:#FF0000;
+    font-size:50px;
+}
+.op{
+  width:460px;
+  background-color:#202020;
+  color:#BCFF00;
+}
+.oop{
+  
+  background-color:#A9A9A9;
+  
+}
+button{
+    text-align:center ;
+    background-color:#FFFF00;
+    height:230px;
+    width:230px;
+    Border:0;
+    color:#27282a;
+    margin-left:0px;
+    margin-right:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    border-radius:100%;
+    
+    font-size:50px;
+}
+body{
+  background-color:#202020;
+}
+
+
+.answer{
+    height:300px;
+    color:#FFFFFF;
+    width:700px;
+    background-color:#202020;
+    Border:0;
+    font-size:60px;
+}
