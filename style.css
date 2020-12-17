@@ -1,10 +1,10 @@
 .p{
     text-align:center ;
-    background-color:#fb8710;
-    height:300px;
+    background-color:#BCFF00;
+    height:230px;
     width:230px;
     Border:0;
-    color:#FFFFFF;
+    color:#27282a;
     margin-left:0px;
     margin-right:0px;
     margin-top:0px;
@@ -13,8 +13,9 @@
     font-size:50px;
 }
 .op{
-  width:464px;
-  background-color:#A9A9A9;
+  width:460px;
+  background-color:#202020;
+  color:#BCFF00;
 }
 .oop{
   
@@ -23,8 +24,8 @@
 }
 button{
     text-align:center ;
-    background-color:#c8c9cb;
-    height:300px;
+    background-color:#FFFF00;
+    height:230px;
     width:230px;
     Border:0;
     color:#27282a;
@@ -32,6 +33,7 @@ button{
     margin-right:0px;
     margin-top:0px;
     margin-bottom:0px;
+    border-radius:100%;
     
     font-size:50px;
 }
@@ -40,7 +42,7 @@ body{
 }
 
 
-textarea{
+.answer{
     height:300px;
     color:#FFFFFF;
     width:700px;
