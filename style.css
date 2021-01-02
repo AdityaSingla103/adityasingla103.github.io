@@ -32,7 +32,7 @@ div.scorecard {
   border: 1px solid black;
   padding: 1vh;
   text-align: center;
-  width: 44.5vw;
+  width: 43vw;
   float: left;
 }
 
@@ -41,7 +41,7 @@ div.overview {
   padding: 1vh;
   border: 1px solid black;
   text-align: center;
-  width: 44.5vw;
+  width: 43vw;
   float: right;
 }
 
