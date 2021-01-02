@@ -1,95 +1,57 @@
-<!doctype html>
-<html>
- <head>
-<link rel="stylesheet" href="style.css">
-<script >var xyz=0;
-var abe=0;
+<!DOCTYPE html>
+<html lang="en">
 
-var res=document.getElementById("answer").value
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Cricket</title>
+    <link rel="stylesheet" href="stylescore.css">
+</head>
 
-function add(number) {
-   var a=document.getElementById('answer').value;
-  document.getElementById("answer").value=a+number;
-}
-
-function remove() {
-    document.getElementById('answer').value="";
+<body>
+    <div class="top">LIVE</div>
+    <div class="second">
+        <img src="/images/icon.png" alt="">
+        <h1>Team A <em>vs</em> Team B</h1>
+    </div>
+    <div id="ball">
+        <p>1</p>
+        <p>0</p>
+        <p>4</p>
+        <p>6</p>
+        <p>W</p>
+        <p>-</p>
+    </div>
+    <div id="root">
+        <div id="border">
+            <p>Team A<br><br>0 / 0 <br> (0)</p>
+        </div>
+        <div id="border2">
+            <p>Team B<br><br>0 / 0 <br> (0)</p>
+            
+        </div>
+    </div>
+    <div id="controller">
+        <button class="one">1</button>
+        <button class="two">2</button>
+        <button class="three">3</button>
+        <button class="four">4</button>
+        <button class="six">6</button>
+        <br>
+        <button>Wide</button>
+        <button>No Ball</button>
+        <button>Dead Ball</button>
+        <button>Wicket</button>
+        <br>
+    </div>
+    <div class="scorecard">
+        <a href="Scorecard">Scorecard</a>
+    </div>
+    <div class="overview">
+        <a href="Overview">Overview</a>
+    </div>
     
-}
 
+</body>
 
-function equal(){
-  if (xyz==0){
-    
-  
-var d= document.getElementById("answer").value
- xyz=0;
- abe=0;
-
-    document.getElementById("answer").value=eval(d);
-    
-    }
-   else if(xyz==1){
-      xyz=0;
-      abe=0;
-      document. getElementById("answer"). value=res
-    }
-
-}
-function prank(){
-  if(abe==2){
-    
-  
-   xyz=1;
-   }
-   else{
-     xyz=3
-   }
-     
-   
-}
-function pranks(){
-  if(xyz==3){
-    res=document.getElementById("answer").value;
-    xyz=0;
-  }
-  else{
-    abe=2;
-  }
-    
-  
-  
-  
-}</script>
-</head>  
- <body> 
-  <title>calculator</title> 
-   
-  <textarea id="answer" class="answer">Enter the result to be displayed</textarea> 
-  <br> 
-  <button class="p" onclick="remove()">c</button> 
-  <button class="op" onclick="history()">history </button> 
-  <button class="p" onclick="equal()"> =</button> 
-  <br> 
-  <button onclick="add('9')">9</button> 
-  <button onclick="add('8')">8</button> 
-  <button onclick="add('7')">7</button> 
-  <button onclick="add('/')" id="p" class="p">÷</button> 
-  <br> 
-  <button onclick="add('6')">6</button> 
-  <button onclick="add('5')">5</button> 
-  <button onclick="add('4')">4</button> 
-  <button class="p" onclick="add('*')">x</button> 
-  <br> 
-  <button onclick="add('3')">3</button> 
-  <button onclick="add('2')">2</button> 
-  <button onclick="add('1')">1</button> 
-  <button class="p" onclick="add('+')">+</button> 
-  <br> 
-  <button class="oop" onclick="prank()">#</button> 
-  <button onclick="add('0')">0</button> 
-  <button class="oop" onclick="pranks()">.</button> 
-  <button class="p" onclick="add('-')"> -</button> 
-   
- </body>
 </html>
