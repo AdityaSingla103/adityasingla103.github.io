@@ -1,0 +1,116 @@
+/* #scooter{
+    width: 10vw;
+    animation-name: start;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    
+}
+@keyframes start{
+
+    49%{
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(-1);
+        margin-left: 90vw;
+    }
+    100%{
+        margin-left: 0vw;
+        transform: scaleX(-1);
+    }
+
+} */
+#navbar{ 
+    list-style: none;
+    background-color: rgba(46, 43, 43);
+    
+    
+    padding: 0px;
+    align-self: center;
+    margin: 0px auto;
+    
+    
+
+}
+#navbar button{
+    background-color: tomato;
+    color: white;
+    border: none;
+  
+    border-radius: 5px;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+
+}
+#navbar li {
+    padding: 10px 0px;
+    display: inline-block;
+    padding-right: 5vw;
+}
+
+html{
+    margin: 0px;
+    font-family: 'Yellowtail', cursive;
+    padding: 0px;
+    background-color: rgb(233, 233, 233);
+ }
+ p{
+     margin: 0px;
+ }
+#navbar li a:hover
+{
+    color: tomato;
+    text-decoration: underline;
+}
+#navbar #active{
+    color: tomato;
+    
+}
+#head{
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+#logo{
+    width: 80px;
+
+}
+#head{
+    background-color: rgb(46, 43, 43);
+}
+#menu{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.card{
+    background-color: rgb(255,255,255);
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: cursive;
+    width: 200px;
+    border-radius: 10px;
+    
+}
+.card img{
+    width:200px;
+    border-radius: 10px;
+}
+option{
+    background-color: rgb(46, 43, 43);
+    border: none;
+    
+}
+.control button, .control p{
+    display: inline-block;
+}
+h1{
+    text-align: center;
+}
+h2{
+    width: 100%;
+}

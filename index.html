@@ -4,80 +4,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cricket</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Fresh Pizza</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Fresh2.0.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 455px)" href="FreshMobile2.0.css" />
 </head>
 
 <body>
+    <div id="head">
+        <img src="img/logo.jpg" id="logo" alt="">
+        <ul id="navbar">
+            <li><a href="#">Home</a></li></a>
+            <li><a href="#" id="active">Order</a></li>
+            <li><button>Call Us</button></li>
 
-    <div class="top">LIVE</div>
-
-    <div class="second">
-        <img src="download.jpg" alt="">
-        <h1>Team A <em>vs</em> Team B</h1>
+        </ul>
     </div>
+    <h1>Menu</h1>
+    <!-- <img src="scooter.png" id="scooter" alt=""> -->
+    <div id="menu">
+        <h2>Burger</h2>
 
-
-    <br>
-    
-    <br>
-
-
-    <div id="ball">
-        <p class="one">1 </p>
-        <p class="two">0</p>
-        <p class="three">4</p>
-        <p class="four">6</p>
-        <p class="five">W</p>
-        <p class="six">-</p>
-    </div>
-
-
-
-    <div id="root">
-        <div id="border">
-            <p>Team A<br><br>0 / 0 <br> (0) </p>
+        <div class="card">
+            <img src="img/aloo tiki.jpg" alt="">
+            <div class="details">
+                <p class="name">Allo Tikki Burger</p>
+                <label for="Size">Size:</label>
+                <select name="Size" id="Size">
+                    <option value="small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+                <div class="control">
+                    <button onclick="suborder(0)">-</button>
+                    <p class="num">0</p>
+                    <button onclick="addorder(0)">+</button>
+                </div>
+            </div>
         </div>
-        <div id="border2">
-            <p>Team B<br><br>0 / 0 <br> (0) </p>
-            
+        <div class="card">
+            <img src="img/veggie burger.jpg" alt="">
+            <div class="details">
+            <p class="name">Veggie Burger</p>
+            <label for="Size">Size:</label>
+            <select name="Size" id="Size">
+                <option value="small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+            <div class="control">
+                <button onclick="suborder(1)">-</button>
+                <p class="num">0</p>
+                <button onclick="addorder(1)">+</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/cheesy burger.jpg" alt="">
+            <div class="details">
+            <p class="name">Cheesy Burger</p>
+            <label for="Size">Size:</label>
+            <select name="Size" id="Size">
+                <option value="small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+            <div class="control">
+                <button onclick="suborder(2)">-</button>
+                <p class="num">0</p>
+                <button onclick="addorder(2)">+</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/chipsburger.jpg" alt="">
+            <div class="details">
+            <p class="name">Pineapple Burger</p>
+            <label for="Size">Size:</label>
+            <select name="Size" id="Size">
+                <option value="small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+            <div class="control">
+                <button onclick="suborder(3)">-</button>
+                <p class="num">0</p>
+                <button onclick="addorder(3)">+</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/pannerjalburger.jpg" alt="">
+            <div class="details">
+            <p class="name">Paneer Jalepino Burger</p>
+            <label for="Size">Size:</label>
+            <select name="Size" id="Size">
+                <option value="small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+            <div class="control">
+                <button onclick="suborder(4)">-</button>
+                <p class="num">0</p>
+                <button onclick="addorder(4)">+</button>
+            </div>
+            </div>
+        </div>
+        <div class="card">
+
+            <img src="img/aloo tiki.jpg" alt="">
+            <div class="details">
+            <p class="name">Maharaja Burger</p>
+            <label for="Size">Size:</label>
+            <select name="Size" id="Size">
+                <option value="small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+            <div class="control">
+                <button onclick="suborder(5)">-</button>
+                <p class="num">0</p>
+                <button onclick="addorder(5)">+</button>
+            </div>
+            </div>
+        </div>
+        
+
     </div>
-    <br>
 
 
-
-    </div>
-    <div id="controller">
-        <button >1</button>
-        <button >2</button>
-        <button >3</button>
-        <button >4</button>
-        <button >6</button>
-        <br>
-        <button>Wide</button>
-        <button>No Ball</button>
-        <button>Dead Ball</button>
-        <button>Wicket</button>
-    </div>
-
-
-
-    <br>
-    
-    <br>
-
-
-
-    <div class="scorecard">
-        <a href="Scorecard">Scorecard</a>
-    </div>
-
-
-    <div class="overview">
-        <a href="Overview">Overview</a>
-    </div>
-
-
+    <script src="Fresh2.0.js"></script>
 </body>
 
 </html>

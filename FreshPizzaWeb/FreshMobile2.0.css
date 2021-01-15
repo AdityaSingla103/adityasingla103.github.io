@@ -1,0 +1,11 @@
+.card{
+    display: flex;
+    background-color: white;
+    flex-grow: 1;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+}
+#navbar{
+    margin:0px 0px;
+}
