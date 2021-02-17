@@ -1,140 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh Pizza</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Fresh2.0.css">
-    <link rel="stylesheet" media="only screen and (max-device-width: 455px)" href="FreshMobile2.0.css" />
+    <title>Apni Kaksha</title>
+    <style>
+        div{
+            height:500px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    
 </head>
+<h1>
+    I am going to steal your location
+</h1>
+<div id="myMap" height = "180px" width="180px"></div>
+<script>
+    if('geolocation' in navigator){
+        console.log('success!!!');
+        navigator.geolocation.getCurrentPosition(location=>{
+        var myMap = L.map('myMap').setView([0,0], 5);
+        console.log(location);
+        var tileurl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+        var attribution = '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+        var tile = L.tileLayer(tileurl,{noWrap : true});
+        tile.addTo(myMap);
+        var marker = L.marker([location.coords.latitude,location.coords.longitude]).addTo(myMap)
+        })
+    }
+</script>
 
 <body>
-    <div id="head">
-        <img src="img/logo.jpg" id="logo" alt="">
-        <ul id="navbar">
-            <li><a href="#">Home</a></li></a>
-            <li><a href="#" id="active">Order</a></li>
-            <li><button>Call Us</button></li>
 
-        </ul>
-    </div>
-    <h1>Menu</h1>
-    <!-- <img src="scooter.png" id="scooter" alt=""> -->
-    <div id="menu">
-        <h2>Burger</h2>
-
-        <div class="card">
-            <img src="img/aloo tiki.jpg" alt="">
-            <div class="details">
-                <p class="name">Allo Tikki Burger</p>
-                <label for="Size">Size:</label>
-                <select name="Size" id="Size">
-                    <option value="small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                </select>
-                <div class="control">
-                    <button onclick="suborder(0)">-</button>
-                    <p class="num">0</p>
-                    <button onclick="addorder(0)">+</button>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/veggie burger.jpg" alt="">
-            <div class="details">
-            <p class="name">Veggie Burger</p>
-            <label for="Size">Size:</label>
-            <select name="Size" id="Size">
-                <option value="small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-            </select>
-            <div class="control">
-                <button onclick="suborder(1)">-</button>
-                <p class="num">0</p>
-                <button onclick="addorder(1)">+</button>
-            </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/cheesy burger.jpg" alt="">
-            <div class="details">
-            <p class="name">Cheesy Burger</p>
-            <label for="Size">Size:</label>
-            <select name="Size" id="Size">
-                <option value="small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-            </select>
-            <div class="control">
-                <button onclick="suborder(2)">-</button>
-                <p class="num">0</p>
-                <button onclick="addorder(2)">+</button>
-            </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/chipsburger.jpg" alt="">
-            <div class="details">
-            <p class="name">Pineapple Burger</p>
-            <label for="Size">Size:</label>
-            <select name="Size" id="Size">
-                <option value="small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-            </select>
-            <div class="control">
-                <button onclick="suborder(3)">-</button>
-                <p class="num">0</p>
-                <button onclick="addorder(3)">+</button>
-            </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="img/pannerjalburger.jpg" alt="">
-            <div class="details">
-            <p class="name">Paneer Jalepino Burger</p>
-            <label for="Size">Size:</label>
-            <select name="Size" id="Size">
-                <option value="small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-            </select>
-            <div class="control">
-                <button onclick="suborder(4)">-</button>
-                <p class="num">0</p>
-                <button onclick="addorder(4)">+</button>
-            </div>
-            </div>
-        </div>
-        <div class="card">
-
-            <img src="img/aloo tiki.jpg" alt="">
-            <div class="details">
-            <p class="name">Maharaja Burger</p>
-            <label for="Size">Size:</label>
-            <select name="Size" id="Size">
-                <option value="small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-            </select>
-            <div class="control">
-                <button onclick="suborder(5)">-</button>
-                <p class="num">0</p>
-                <button onclick="addorder(5)">+</button>
-            </div>
-            </div>
-        </div>
-        
-
-    </div>
-
-
-    <script src="Fresh2.0.js"></script>
 </body>
 
 </html>
